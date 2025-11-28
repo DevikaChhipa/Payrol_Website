@@ -5,6 +5,9 @@ body{
    font-family: "Poppins", sans-serif;
 }
 
+button{
+  cursor: pointer !important;
+}
 .hero-slide-up {
   animation: heroSlideUp 0.9s ease-out;
 }
