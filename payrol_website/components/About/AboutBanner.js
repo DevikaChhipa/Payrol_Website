@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 
 export default function AboutBanner() {
   return (
-    <section className="relative overflow-hidden -mt-22 bg-cover bg-center bg-no-repeat py-24 px-6 md:px-16"
+    <section className="relative overflow-hidden -mt-26 bg-cover bg-center bg-no-repeat py-24 px-6 md:px-16"
   style={{ backgroundImage: "url('about/banner-bg.jpg')" }}>
-    <div className="absolute inset-0 bg-black/40"></div>
+    <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Soft floating circles */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-[#ffdfb2] rounded-full opacity-30 blur-2xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#ffe1c2] rounded-full opacity-30 blur-3xl animate-ping"></div>
 
-      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -21,12 +21,12 @@ export default function AboutBanner() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-200 leading-tight">
+          <h1 className="text-4xl md:text-6xl md:mt-30 font-bold text-gray-200 leading-tight">
             About <span className="text-[#fa9404]">Us</span>
           </h1>
 
           <p className="mt-5 text-gray-300 text-lg md:text-xl leading-relaxed">
-            We are committed to delivering exceptional quality, modern solutions, 
+            We are committed to delivering exceptional quality, modern solutions,
             and seamless user experience.
           </p>
 
