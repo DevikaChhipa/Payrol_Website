@@ -18,7 +18,7 @@ export default function CompanyStory() {
           <img
             src="/about/team1.jpg"
             alt="office"
-            className="w-[360px] rounded-xl shadow-lg absolute left-34 top-58"
+            className="w-[360px] rounded-xl shadow-lg absolute left-34 top-58 border-t-4 border-l-4 border-[#fa9404]"
           />
         </div>
 
