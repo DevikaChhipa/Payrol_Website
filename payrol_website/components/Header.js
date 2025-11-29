@@ -51,8 +51,8 @@ export default function Header() {
 
                     {/* Right info / CTA */}
                     <div className="flex items-center gap-4">
-                        <div className="hidden sm:flex items-center  border-r-2 border-slate-400 pr-4 gap-2 text-xs">
-                            <div className="w-12 h-12 rounded-full border border-yellow-400 flex items-center justify-center">
+                        <div className="hidden group sm:flex items-center  border-r-2 border-slate-400 pr-4 gap-2 text-xs">
+                            <div className="w-12 h-12 rounded-full border group-hover:bg-yellow-400 border-yellow-400 transition-all flex items-center justify-center">
                                 <IoCallOutline size={20} />
                             </div>
                             <div className="leading-tight">
@@ -62,7 +62,7 @@ export default function Header() {
                         </div>
                         <Link href="#contact" className="group relative inline-flex h-13 items-center overflow-hidden rounded-md bg-yellow-400 px-6 text-[15px] font-semibold text-white">
                           <span
-                            className="flex items-center gap-2 transition-all duration-300 ease-out
+                            className="flex items-center gap-2 transition-all duration-700 justify-center ease-out
                                        group-hover:translate-x-full group-hover:opacity-0"
                           >
                             <span>Get In Touch</span>
@@ -72,10 +72,7 @@ export default function Header() {
                           </span>
 
                           <span
-                            className="absolute inset-0 flex items-center gap-2 -translate-x-full opacity-0
-                                       px-6 transition-all duration-300 ease-out
-                                       group-hover:translate-x-0 group-hover:opacity-100"
-                          >
+                            className="absolute inset-0 flex items-center gap-2 -translate-x-full opacity-0 px-6 transition-all duration-700 ease-out group-hover:translate-x-0 group-hover:opacity-100">
                             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
                               <FaArrowRight className="text-sm" />
                             </span>
