@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function AboutBanner() {
   return (
-    <section className="relative overflow-hidden -mt-26 bg-cover bg-center bg-no-repeat py-24 px-6 md:px-16"
+    <section className="relative overflow-hidden -mt-30 bg-cover bg-center bg-no-repeat py-24 px-6 md:px-16"
   style={{ backgroundImage: "url('about/banner-bg.jpg')" }}>
     <div className="absolute inset-0 bg-black/60"></div>
-      
+
       {/* Soft floating circles */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-[#ffdfb2] rounded-full opacity-30 blur-2xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#ffe1c2] rounded-full opacity-30 blur-3xl animate-ping"></div>

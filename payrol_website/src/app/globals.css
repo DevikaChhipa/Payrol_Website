@@ -24,3 +24,15 @@ button{
     filter: blur(0);
   }
 }
+
+
+/* footer */
+.rotating-circle {
+  animation: rotate-circle 15s linear infinite;
+}
+
+@keyframes rotate-circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}

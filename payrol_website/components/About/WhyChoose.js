@@ -1,86 +1,136 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { Wallet, Landmark, UserRound } from "lucide-react";
 
 export default function WhyChooseUs() {
+
   const [active, setActive] = useState(0);
 
-  const content = [
+const services = [
     {
       title: "Market Research",
-      desc: "Businesses that partner with us gain a strategic advantage through deep analysis and industry insights.",
-      icon: "💼",
-      image: "/images/choose1.jpg",
+      desc: "Businesses that partner with us gain a strategic advantage",
+      icon: <Wallet className="w-10 h-10 text-orange-500" />,
+      image: "/about/why-img1.jpg",
     },
     {
-      title: "Business Growth",
-      desc: "We help companies scale fast with accurate planning, strong execution, and expert consulting.",
-      icon: "📈",
-      image: "/images/choose2.jpg",
+      title: "Risk Management",
+      desc: "Businesses that partner with us gain a strategic advantage",
+      icon: <Landmark className="w-10 h-10 text-orange-500" />,
+      image: "/about/why-img2.jpg",
     },
     {
-      title: "Expert Guidance",
-      desc: "Get trusted support from professionals who understand your needs and provide tailored solutions.",
-      icon: "🧠",
-      image: "/images/choose3.jpg",
+      title: "Tax Preparation",
+      desc: "Businesses that partner with us gain a strategic advantage",
+      icon: <UserRound className="w-10 h-10 text-orange-500" />,
+      image: "/about/why-img3.jpg",
     },
   ];
 
+
   return (
+    <>
     <section className="py-24 px-6 md:px-16 bg-white">
-      <h2 className="text-center text-4xl font-bold text-gray-900 mb-16">
-        Why <span className="text-[#fa9404]">Choose Us</span>
+
+
+      <div className="flex justify-center">
+        <span className="px-4 py-1 text-sm rounded-md bg-gray-100 text-gray-600">
+          WHY CHOOSE US
+        </span>
+      </div>
+
+
+      <h2 className="text-center text-4xl md:text-5xl font-bold text-gray-900 mt-6">
+        Amazing accounting statistics show the <br /> power of numbers.
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6 relative max-w-6xl mx-auto">
 
-        {/* IMAGES */}
-        {content.map((item, index) => (
+      <div className="grid lg:grid-cols-2 gap-10 mt-12 max-w-6xl mx-auto">
+
+
+        <div className="mx-auto">
+          <Image
+            src="/about/why-img.jpg"
+            width={600}
+            height={350}
+            alt="chart"
+            className="w-75 object-contain rounded-2xl"
+          />
+        </div>
+
+
+        <div className="text-gray-600 leading-relaxed">
+          <p>
+            Our firm is built on a foundation of responsiveness. We understand
+            that in a fast-paced business world, a timely answer is a competitive
+            advantage.
+          </p>
+
+          <ul className="space-y-4 mt-6">
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-3 w-3 rounded-full bg-[#fa9404]"></span>
+              Social security and pension optimization
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-3 w-3 rounded-full bg-[#fa9404]"></span>
+              GST, TDS, and income tax filings
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-3 w-3 rounded-full bg-[#fa9404]"></span>
+              Tax deductions & exemptions guidance
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </section>
+
+   <section className="w-full pb-12 px-6 md:px-10">
+      <div className="grid md:grid-cols-3 gap-6">
+
+        {services.map((item, index) => (
           <div
             key={index}
-            className={`group relative cursor-pointer rounded-xl overflow-hidden shadow-md border 
-              ${active === index ? "border-[#fa9404]" : "border-transparent"}`}
+            className="relative cursor-pointer group"
             onMouseEnter={() => setActive(index)}
+            onMouseLeave={() => setActive(0)}
           >
+            {/* IMAGE */}
             <img
               src={item.image}
-              alt="why choose"
-              className="w-full h-[260px] object-cover transform group-hover:scale-105 transition duration-500"
+              className="w-full h-[280px] object-cover rounded-xl shadow-lg"
             />
 
-            {/* Overlay */}
-            <div className={`absolute inset-0 bg-black/20 group-hover:bg-black/30 transition`} />
+
+            <AnimatePresence mode="wait">
+              {active === index && (
+             <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: 40 }}
+  transition={{ duration: 0.35 }}
+  className="
+    absolute bottom-0 left-0 right-0 h-1/2
+    bg-gradient-to-t from-orange-500/90 via-orange-500/70 to-transparent
+    px-5 shadow-xl text-white backdrop-blur-[2px]
+  "
+>
+  <div className="mb-2">{item.icon}</div>
+  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+  <p className="my-2 text-white/90">{item.desc}</p>
+</motion.div>
+
+              )}
+            </AnimatePresence>
           </div>
         ))}
-      </div>
 
-      {/* CONTENT SLIDE AREA */}
-      <div className="relative max-w-6xl mx-auto mt-12 min-h-[160px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -40 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
-          >
-            <div className="flex items-start gap-5">
-              <div className="text-4xl">{content[active].icon}</div>
-
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                  {content[active].title}
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {content[active].desc}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
       </div>
     </section>
+    </>
   );
 }
