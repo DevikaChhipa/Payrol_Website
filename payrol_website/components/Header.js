@@ -35,16 +35,16 @@ export default function Header() {
                         <Link href="#home" className="text-yellow-400 font-semiboldtext-[14px]">
                             Home
                         </Link>
-                        <Link href="#features" className="hover:text-yellow-300 text-[14px]">
-                            Features
+                        <Link href="/about" className="hover:text-yellow-300 text-[14px]">
+                            About
                         </Link>
-                        <Link href="#benefits" className="hover:text-yellow-300 text-[14px]">
-                            Benefits
+                        <Link href="/management" className="hover:text-yellow-300 text-[14px]">
+                            Payroll Management
                         </Link>
                         <Link href="#pricing" className="hover:text-yellow-300 text-[14px]">
                             Pricing
                         </Link>
-                        <Link href="#contact" className="hover:text-yellow-300 text-[14px]">
+                        <Link href="/contact" className="hover:text-yellow-300 text-[14px]">
                             Contact
                         </Link>
                     </nav>

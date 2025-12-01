@@ -83,7 +83,7 @@ export default function BusinessNeed() {
         />
 
         {/* BLACK GRADIENT FROM BOTTOM */}
-        <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-black via-black/50 to-transparent"></div>
 
         {/* TEXT ON IMAGE */}
         <div className="absolute bottom-16 left-8 md:left-16">
