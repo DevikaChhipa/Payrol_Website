@@ -3,7 +3,7 @@ import { FaArrowUp } from "react-icons/fa6";
 
 export default function WhyChoose() {
   return (
-    <section className="bg-[#ecf0f4] py-16 md:py-20 lg:pt-24 lg:pb-16 px-4 sm:px-8 md:px-12 lg:px-24">
+    <section className="bg-[#ecf0f4] py-16 md:py-20 lg:pt-24 lg:pb-16 px-4 sm:px-8 md:px-12 lg:px-24 whyus-section relative">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
         {/* Left: Text block */}
         <div className="w-full lg:max-w-xl">
