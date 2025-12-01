@@ -74,21 +74,21 @@ export default function Footer() {
         <div className="lg:col-span-2">
           <h3 className="font-semibold text-lg mb-4">Main Pages</h3>
           <ul className="space-y-3 text-gray-300">
-            <li>Home</li>
-            <li>Blog</li>
-            <li>About</li>
-            <li>Blog Page</li>
-            <li>Service Page</li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/">Blog</Link></li>
+            <li><Link href="/">About</Link></li>
+            <li><Link href="/">Blog Page</Link></li>
+            <li><Link href="/">Service Page</Link></li>
           </ul>
         </div>
 
         <div className="lg:col-span-2">
           <h3 className="font-semibold text-lg mb-4">Our Company</h3>
           <ul className="space-y-3 text-gray-300">
-            <li>Service Single</li>
-            <li>Blog Single</li>
-            <li>Products</li>
-            <li>Contact</li>
+            <li><Link href="/">Service Single</Link></li>
+            <li><Link href="/">Blog Single</Link></li>
+            <li><Link href="/">Products</Link></li>
+            <li><Link href="/">Contact</Link></li>
           </ul>
         </div>
 
