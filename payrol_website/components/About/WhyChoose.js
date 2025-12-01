@@ -33,11 +33,11 @@ const services = [
 
   return (
     <>
-    <section className="py-24 px-6 md:px-16 bg-white">
+    <section className="py-14 px-6 md:px-16 bg-[#ecf0f4]">
 
 
       <div className="flex justify-center">
-        <span className="px-4 py-1 text-sm rounded-md bg-gray-100 text-gray-600">
+        <span className="px-4 py-1 text-sm rounded-md bg-white font-bold text-gray-600">
           WHY CHOOSE US
         </span>
       </div>
@@ -86,22 +86,22 @@ const services = [
         </div>
       </div>
 
-
-    </section>
-
-   <section className="w-full pb-12 px-6 md:px-10">
+   <section className="w-full pb-12 px-6 md:px-10 mt-10">
       <div className="grid md:grid-cols-3 gap-6">
 
         {services.map((item, index) => (
           <div
             key={index}
-            className="relative cursor-pointer group"
+            className="relative cursor-pointer group overflow-hidden"
             onMouseEnter={() => setActive(index)}
             onMouseLeave={() => setActive(0)}
           >
             {/* IMAGE */}
-            <img
+            <Image
               src={item.image}
+              width={100}
+            height={100}
+            alt="chart"
               className="w-full h-[280px] object-cover rounded-xl shadow-lg"
             />
 
@@ -116,7 +116,7 @@ const services = [
   className="
     absolute bottom-0 left-0 right-0 h-1/2
     bg-gradient-to-t from-orange-500/90 via-orange-500/70 to-transparent
-    px-5 shadow-xl text-white backdrop-blur-[2px]
+    px-5 shadow-xl text-white backdrop-blur-[2px] rounded-b-xl
   "
 >
   <div className="mb-2">{item.icon}</div>
@@ -131,6 +131,9 @@ const services = [
 
       </div>
     </section>
+    </section>
+
+
     </>
   );
 }
