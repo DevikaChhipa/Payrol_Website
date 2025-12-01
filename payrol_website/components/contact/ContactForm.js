@@ -1,163 +1,160 @@
 "use client";
 
-import { useState } from "react";
-import { Clock, Phone, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ContactSection() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  
+     const cards = [
+    {
+      icon: <MdEmail className="text-[#fa9404] w-10 h-10" />,
+      title: "reply@example.com",
+      desc: "Provides speed, cost-effectiveness, and the ability to easily send files.",
+    },
+    {
+      icon: <FaPhoneAlt className="text-[#fa9404] w-10 h-10" />,
+      title: "+0123-895-4732",
+      desc: (
+        <>
+          Mon to Sat: 09:00am to 05:00pm <br />
+          Sunday: 09:00am to 12:00pm
+        </>
+      ),
+    },
+    {
+      icon: <FaMapMarkerAlt className="text-[#fa9404] w-10 h-10" />,
+      title: "Location",
+      desc: (
+        <>
+          8502 Preston Rd. Inglewood, Maine 9838086, <br />
+          Hoofddorp Noord-2132
+        </>
+      ),
+    },
+  ];
 
-  const [errors, setErrors] = useState({});
-
-  const validateForm = () => {
-    let newErrors = {};
-
-    if (!form.name.trim()) newErrors.name = "Name is required";
-    if (!form.email.trim()) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(form.email))
-      newErrors.email = "Enter a valid email";
-
-    if (!form.phone.trim()) newErrors.phone = "Phone number is required";
-    else if (!/^[0-9]{10}$/.test(form.phone))
-      newErrors.phone = "Enter a valid 10-digit number";
-
-    if (!form.message.trim()) newErrors.message = "Message is required";
-
-    setErrors(newErrors);
-
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      alert("Form submitted successfully!");
-    }
-  };
 
   return (
-    <section className="py-20 px-6 md:px-16 bg-[#ecf0f4]">
-      <div className="grid md:grid-cols-2 gap-12">
+ <section className="py-20 max-w-7xl mx-auto">
+     <span className="bg-white px-4 py-2 rounded-md text-gray-700 font-medium shadow-sm">
+            CONTACT US
+          </span>
 
-
-        <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">
-            Send Us a Message
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mt-4 leading-tight">
+            Get support from our team.
           </h2>
+      <div className=" grid md:grid-cols-2 gap-10 items-center">
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+        {/* LEFT SIDE IMAGE */}
+        <div className="flex justify-center">
+          <img
+            src="/contact/contact-img.jpg"      // replace with your actual image path
+            alt="Support team"
+            className="w-full max-w-md object-cover rounded-xl border-l-4 border-t-4 border-[#fa9404]"
+          />
+        </div>
 
-            {/* NAME */}
-            <div>
-              <label className="font-semibold text-gray-700">Name</label>
+        {/* RIGHT SIDE FORM */}
+        <div>
+        
+         
+
+          {/* Form Card */}
+          <div className=" py-8 mt-8">
+
+            {/* MESSAGE BOX */}
+            <textarea
+              placeholder="Message"
+              className="bg-white w-full h-32 p-4 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            ></textarea>
+
+            {/* NAME & PHONE */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <input
                 type="text"
-                className="w-full mt-2 p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                placeholder="Full Name *"
+                className="bg-white w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
-              {errors.name && (
-                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-              )}
+
+              <input
+                type="text"
+                placeholder="Phone Number *"
+                maxLength={10}
+                inputMode="numeric"
+                onChange={(e) =>
+                  (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+                }
+                className="bg-white w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
             </div>
 
             {/* EMAIL */}
-            <div>
-              <label className="font-semibold text-gray-700">Email</label>
-              <input
-                type="email"
-                className="w-full mt-2 p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-              )}
-            </div>
+            <input
+              type="email"
+              placeholder="Email Address *"
+              className="bg-white w-full p-3 rounded-md border border-gray-300 mt-4 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
 
-            {/* PHONE */}
-            <div>
-              <label className="font-semibold text-gray-700">Phone</label>
-              <input
-  type="text"
-  inputMode="numeric"
-  pattern="[0-9]*"
-  maxLength={10}
-  className="w-full mt-2 p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-  value={form.phone}
-  onChange={(e) => {
-    const onlyNums = e.target.value.replace(/[^0-9]/g, ""); // removes alphabets and symbols
-    setForm({ ...form, phone: onlyNums });
-  }}
-/>
+            {/* CHECKBOX */}
+            <label className="flex items-start gap-2 mt-4 text-gray-600 cursor-pointer">
+              <input type="checkbox" className="mt-1" />
+              <span>
+                Save my name, email, and website in this browser for the next time I comment.
+              </span>
+            </label>
 
-            </div>
 
-            {/* MESSAGE */}
-            <div>
-              <label className="font-semibold text-gray-700">Message</label>
-              <textarea
-                className="w-full mt-2 p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none"
-                rows={4}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-              ></textarea>
-              {errors.message && (
-                <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-              )}
-            </div>
 
-            {/* BUTTON */}
-            <button
-              type="submit"
-              className="w-full bg-[#fa9404] hover:bg-orange-600 transition text-white font-semibold py-3 rounded-lg"
-            >
-              Submit
-            </button>
-          </form>
+ <Link href="#contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+                <span
+                  className="flex items-center gap-2 transition-all duration-700 ease-out
+                                       group-hover:translate-x-full group-hover:opacity-0"
+                >
+                  <span>Send Message</span>
+                <span className="bg-white text-black rounded-full py-1 px-2">
+                ➤
+              </span>
+                </span>
+
+                <span
+                  className="absolute inset-0 flex items-center gap-2 -translate-x-full opacity-0
+                                       px-6 transition-all duration-700 ease-out
+                                       group-hover:translate-x-0 group-hover:opacity-100"
+                >
+                
+                  <span>Send Message</span>
+                    <span className="bg-white text-black rounded-full py-1 px-2">
+                ➤
+              </span>
+                </span>
+              </Link>
+          </div>
         </div>
-
-        {/* ================= RIGHT CARDS ================= */}
-        <div className="flex flex-col gap-6">
-
-          {/* Card 1 – Office Hours */}
-          <div className="bg-white p-6 rounded-xl shadow-lg flex items-start gap-4">
-            <Clock className="text-[#fa9404]" size={36} />
-            <div>
-              <h3 className="text-xl font-semibold">Office Hours</h3>
-              <p className="text-gray-600 mt-1">Mon – Fri: 9:00 AM – 7:00 PM</p>
-              <p className="text-gray-600">Saturday: 10:00 AM – 4:00 PM</p>
-            </div>
-          </div>
-
-          {/* Card 2 – Phone & Email */}
-          <div className="bg-white p-6 rounded-xl shadow-lg flex items-start gap-4">
-            <Phone className="text-[#fa9404]" size={36} />
-            <div>
-              <h3 className="text-xl font-semibold">Contact Info</h3>
-              <p className="text-gray-600 mt-1">+91 9876543210</p>
-              <p className="text-gray-600">support@example.com</p>
-            </div>
-          </div>
-
-          {/* Card 3 – Location */}
-          <div className="bg-white p-6 rounded-xl shadow-lg flex items-start gap-4">
-            <MapPin className="text-[#fa9404]" size={36} />
-            <div>
-              <h3 className="text-xl font-semibold">Our Location</h3>
-              <p className="text-gray-600 mt-1">
-                123 Business Street, Jaipur, Rajasthan
-              </p>
-            </div>
-          </div>
-
-        </div>
-
       </div>
+       <div className="grid md:grid-cols-3 gap-8 px-6 py-6">
+      {cards.map((card, i) => (
+        <div
+          key={i}
+          className="group bg-white rounded-xl p-7 shadow-lg hover:shadow-lg transition-all duration-300"
+        >
+          {/* Icon flip animation */}
+          <div className="transition-transform duration-500 transform ">
+            {card.icon}
+          </div>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6">
+            {card.title}
+          </h3>
+
+          <p className="text-gray-600 mt-4 leading-relaxed">{card.desc}</p>
+
+         
+        </div>
+      ))}
+    </div>
     </section>
   );
 }
