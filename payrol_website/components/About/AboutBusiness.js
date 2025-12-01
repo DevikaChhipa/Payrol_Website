@@ -34,7 +34,7 @@ export default function FinancialProcess() {
   ];
 
   return (
-   <section className="w-full bg-[#111C27] text-white py-20 px-6 md:px-16 mb-6 md:mb-12">
+   <section className="w-full bg-[#111C27] text-white py-20 px-6 md:px-16 ">
   <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-start">
 
     {/* ---------- SECTION 1 : HEADING + PARAGRAPH ---------- */}
