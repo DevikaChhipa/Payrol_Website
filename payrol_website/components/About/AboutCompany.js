@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 export default function CompanyStory() {
   return (
-    <section className="bg-[#F5F8FA] py-20 md:pt-20 md:pb-50 px-6 md:px-16">
+    <section className="bg-[#ecf0f4] py-20 md:pt-20 md:pb-2 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
         {/* LEFT IMAGES */}
@@ -18,7 +19,7 @@ export default function CompanyStory() {
           <img
             src="/about/team1.jpg"
             alt="office"
-            className="w-[360px] rounded-xl shadow-lg absolute left-34 top-58 border-t-4 border-l-4 border-[#fa9404]"
+            className="w-[360px] rounded-xl shadow-lg absolute left-34 -top-20 border-t-4 border-l-4 border-[#fa9404]"
           />
         </div>
 
@@ -37,10 +38,10 @@ export default function CompanyStory() {
             Processing Services to businesses and individuals, helping them achieve.
           </p>
 
-          {/* Call-to-action */}
-          <button className="mt-8 px-7 py-4 bg-gray-900 text-white rounded-xl shadow hover:bg-gray-800 transition flex items-center gap-2">
-            Discover More <span>→</span>
-          </button>
+          
+          <Link href="/services" className="mt-8 px-7 py-4 bg-gray-900 text-white rounded-xl flex w-50">
+            Discover More <span className="ml-3">→</span>
+          </Link>
 
         </div>
       </div>
