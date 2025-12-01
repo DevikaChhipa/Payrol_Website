@@ -7,10 +7,12 @@ import ContactSection from "../../../components/contact/ContactForm";
 
 
 export default function Contact() {
-  return (
+  return (    
     <>
-     <ContactBanner />
+    <div className="bg-[#eef2f5]">
+         <ContactBanner />
      <ContactSection />
+    </div>
     </>
   );
 }
