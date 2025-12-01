@@ -46,16 +46,7 @@ export default function AboutBanner() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT IMAGE / ARTWORK */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-
-        </motion.div>
+      
 
       </div>
     </section>
