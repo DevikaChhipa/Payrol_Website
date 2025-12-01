@@ -75,28 +75,28 @@ export default function FullscreenHeroSlider() {
                             {slides[index].subtitle}
                         </p>
                         <div className="flex gap-4">
-                           <Link href="#contact" className="group relative inline-flex h-13 items-center overflow-hidden rounded-md bg-yellow-400 px-6 text-[15px] font-semibold text-white">
-                          <span
-                            className="flex items-center gap-2 transition-all duration-700 ease-out
+                            <Link href="#contact" className="group relative inline-flex h-13 items-center overflow-hidden rounded-md bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+                                <span
+                                    className="flex items-center gap-2 transition-all duration-700 ease-out
                                        group-hover:translate-x-full group-hover:opacity-0"
-                          >
-                            <span>Request Demo</span>
-                            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                              <FaArrowRight className="text-sm" />
-                            </span>
-                          </span>
+                                >
+                                    <span>Request Demo</span>
+                                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
+                                        <FaArrowRight className="text-sm" />
+                                    </span>
+                                </span>
 
-                          <span
-                            className="absolute inset-0 flex items-center gap-2 -translate-x-full opacity-0
+                                <span
+                                    className="absolute inset-0 flex items-center gap-2 -translate-x-full opacity-0
                                        px-6 transition-all duration-700 ease-out
                                        group-hover:translate-x-0 group-hover:opacity-100"
-                          >
-                            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                              <FaArrowRight className="text-sm" />
-                            </span>
-                            <span>Request Demo</span>
-                          </span>
-                        </Link>
+                                >
+                                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
+                                        <FaArrowRight className="text-sm" />
+                                    </span>
+                                    <span>Request Demo</span>
+                                </span>
+                            </Link>
                             <button className="rounded-md border border-slate-200 px-6 py-2.5 text-sm transition hover:border-yellow-300 hover:text-yellow-300">
                                 Contact Us
                             </button>

@@ -1,11 +1,15 @@
-// components/AboutSection.js
+
 import Image from "next/image";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+import { MdCheck } from "react-icons/md";
+
 
 function Badge({ children }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-medium text-slate-700 shadow">
-      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-yellow-400 text-[11px]">
-        ✓
+    <div className="inline-flex items-center gap-2 ">
+      <span className="flex p-3 rounded-full bg-white  text-xs font-bold shadow-xl text-[11px]">
+        <MdCheck size={20} fill="yellow" className="font-bold" />
       </span>
       {children}
     </div>
@@ -14,13 +18,12 @@ function Badge({ children }) {
 
 function FeatureCard({ icon, title, subtitle }) {
   return (
-    <div className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm">
-      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f7fafc]">
-        <Image src={icon} alt={title} width={40} height={40} />
+    <div className="flex items-center ">
+      <div className="flex h-14 w-[64px] items-center justify-center rounded-sm bg-white" style={{ boxShadow: "0 5px 40px 0 rgba(0,0,0,0.10)" }}>
+        <Image src={icon} alt={title} width={30} height={30} className="" />
       </div>
       <div>
-        <h3 className="text-sm font-semibold text-slate-900">{title}</h3>
-        <p className="mt-1 text-xs text-slate-500">{subtitle}</p>
+        <h3 className="text-[14px] font-semibold text-slate-900 ms-5">{title}</h3>
       </div>
     </div>
   );
@@ -28,76 +31,76 @@ function FeatureCard({ icon, title, subtitle }) {
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#f5f7fb] py-16">
-      <div className="mx-auto flex flex-col gap-12 px-20 lg:flex-row lg:items-center">
-        {/* LEFT images */}
-        <div className="relative flex-1">
-          <div className="relative h-72 w-full rounded-2xl overflow-hidden shadow-md lg:h-80">
+    <section className="bg-[#ecf0f4] pb-16 pt-24">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_2fr] gap-10 px-6 lg:px-10 mb-10">
+        <div className="relative mx-auto max-w-2xl lg:mx-0 lg:block grid grid-cols-1 xs:grid-cols-2 gap-4 lg:gap-0">
+          <div className="relative lg:h-[432px] lg:w-[431px] rounded-md overflow-hidden ">
             <Image
-              src="/about/main-team.jpg"
+              src="/Home/about.png"
               alt="Team discussing finances"
               fill
-              className="object-cover"
+              className="object-cover relative"
             />
           </div>
-
-          <div className="absolute -bottom-10 left-10 h-52 w-72 rounded-2xl overflow-hidden shadow-xl border border-white lg:h-56 lg:w-80">
+          <div className="lg:h-[327px] lg:w-[302px]  rounded-none overflow-hidden shadow-xl lg:absolute md:hidden lg:block  lg:-bottom-14 lg:left-38 lg:rounded-md">
             <Image
-              src="/about/office-person.jpg"
+              src="/Home/about2.png"
               alt="Professional at desk"
               fill
-              className="object-cover"
+              className="object-cover relative"
             />
           </div>
         </div>
+        <div className="pt-12 lg:pt-0 max-w-6xl mx-auto">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10 ml-16 items-center justify-center">
+            <div className="w-full lg:max-w-md">
+              <span className="inline-block rounded-sm bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 shadow-sm">
+                About us
+              </span>
 
-        {/* CENTER text */}
-        <div className="flex-1 pt-12 lg:pt-0">
-          <span className="inline-block rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 shadow-sm">
-            About us
-          </span>
+              <h2 className="mt-4 text-[16px] font-bold  text-[#1e3238] md:text-[48px]" style={{lineHeight:"48px"}}>
+                With a global reach our firm has been in business since 1998.
+              </h2>
 
-          <h2 className="mt-4 text-3xl font-bold leading-snug text-slate-900 md:text-4xl">
-            With a global reach our firm has been in business since 1998.
-          </h2>
+              <p className="mt-4 text-sm leading-relaxed text-slate-600 md:text-base">
+                Our mission is to provide exceptional Accounting, Taxation & Payroll Processing Services
+                to businesses and individuals, helping them achieve financial clarity and growth.
+              </p>
 
-          <p className="mt-4 text-sm leading-relaxed text-slate-600 md:text-base">
-            Our mission is to provide exceptional Accounting, Taxation &amp;
-            Payroll Processing Services to businesses and individuals, helping
-            them achieve financial clarity and growth.
-          </p>
+              <Link href="#contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+                <span
+                  className="flex items-center gap-2 transition-all duration-700 ease-out
+                                       group-hover:translate-x-full group-hover:opacity-0"
+                >
+                  <span>Discover More</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
+                    <FaArrowRight className="text-sm" />
+                  </span>
+                </span>
 
-          <button className="mt-6 inline-flex items-center gap-3 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition">
-            Discover More
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-900 text-xs">
-              →
-            </span>
-          </button>
-
-          <div className="mt-10 flex flex-wrap gap-6">
+                <span
+                  className="absolute inset-0 flex items-center gap-2 -translate-x-full opacity-0
+                                       px-6 transition-all duration-700 ease-out
+                                       group-hover:translate-x-0 group-hover:opacity-100"
+                >
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
+                    <FaArrowRight className="text-sm" />
+                  </span>
+                  <span>Discover More</span>
+                </span>
+              </Link>
+            </div>
+            <div className="space-y-4 max-w-sm mx-auto lg:mx-0">
+              <FeatureCard icon="/Home/wallet.png" title="Payroll processing services" />
+              <FeatureCard icon="/Home/stats-icons.png" title="We provide expertise you can trust" />
+              <FeatureCard icon="/Home/cards.png" title="Business financial planning" />
+            </div>
+          </div>
+          <div className="mt-10 flex flex-wrap gap-6 border-t pt-6 border-[#ccc] ml-16">
             <Badge>Tax relief/refund claims</Badge>
             <Badge>First‑time filers</Badge>
             <Badge>Couriers, riders or drivers</Badge>
           </div>
-        </div>
-
-        {/* RIGHT feature list */}
-        <div className="flex-1 space-y-4">
-          <FeatureCard
-            icon="/icons/payroll.svg"
-            title="Payroll processing services"
-            subtitle="Accurate and timely payroll for your teams."
-          />
-          <FeatureCard
-            icon="/icons/expertise.svg"
-            title="We provide expertise you can trust"
-            subtitle="Experienced professionals for complex cases."
-          />
-          <FeatureCard
-            icon="/icons/finance.svg"
-            title="Business financial planning"
-            subtitle="Strategic planning for long‑term growth."
-          />
         </div>
       </div>
     </section>
