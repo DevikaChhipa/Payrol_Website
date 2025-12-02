@@ -78,7 +78,7 @@ export default function Footer() {
   </li>
 
   <li>
-    <Link href="/" className="relative group inline-block hover:text-[#fa9404]">
+    <Link href="/blog" className="relative group inline-block hover:text-[#fa9404]">
       Blog
       <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#fa9404] transition-all duration-300 group-hover:w-full"></span>
     </Link>

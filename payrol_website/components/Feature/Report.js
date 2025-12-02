@@ -31,7 +31,7 @@ export default function ReportSection() {
             <div
               key={index}
               className="
-                bg-[#1A1A1A] text-white rounded-2xl p-8 shadow-lg 
+                bg-[#0E1924] text-white rounded-2xl p-8 shadow-lg 
                 transition-all duration-300 hover:bg-[#2A2A2A] hover:bg-[#fa9404] group
               "
             >

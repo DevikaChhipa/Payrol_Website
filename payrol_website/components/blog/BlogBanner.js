@@ -3,11 +3,11 @@
 
 import { motion } from "framer-motion";
 
-export default function Featuresbanner() {
+export default function BlogbannerSection() {
     return (
         <section
             className="relative w-full h-[60vh] md:h-[70vh] -mt-30 bg-cover bg-center bg-no-repeat flex items-end"
-            style={{ backgroundImage: "url('/feature/feature-banner.jpg')" }}>
+            style={{ backgroundImage: "url('/blog/blog-banner.jpg')" }}>
 
             <div className="absolute inset-0 bg-black/60"></div>
 
@@ -20,7 +20,7 @@ export default function Featuresbanner() {
                         viewport={{ once: true }}
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-                            Payroll <span className="text-[#fa9404]">Features</span>
+                            Blog 
                         </h1>
                     </motion.div>
                     <motion.div

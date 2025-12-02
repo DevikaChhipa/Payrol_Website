@@ -37,13 +37,13 @@ export default function ContactSection() {
 
 
   return (
- <section className="py-20 max-w-7xl mx-auto">
+ <section className="py-20 max-w-6xl mx-auto ">
      <span className="bg-white px-4 py-2 rounded-md text-gray-700 font-medium shadow-sm">
             CONTACT US
           </span>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mt-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mt-4 leading-tight">
             Get support from our team.
           </h2>
       <div className=" grid md:grid-cols-2 gap-10 items-center">

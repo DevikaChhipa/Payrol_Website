@@ -44,7 +44,7 @@ export default function Header() {
           <Link href="/Payroll" className="hover:text-yellow-300 text-[14px]">
             Payroll Management
           </Link>
-          <Link href="/Features" className="hover:text-yellow-300 text-[14px]">
+          <Link href="/feature" className="hover:text-yellow-300 text-[14px]">
             Features
           </Link>
           <Link href="/contact" className="hover:text-yellow-300 text-[14px]">
