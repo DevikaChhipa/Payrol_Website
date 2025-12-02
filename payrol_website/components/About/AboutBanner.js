@@ -8,13 +8,12 @@ export default function AboutBanner() {
   style={{ backgroundImage: "url('about/banner-bg.jpg')" }}>
     <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Soft floating circles */}
+     
       <div className="absolute top-10 left-10 w-32 h-32 bg-[#ffdfb2] rounded-full opacity-30 blur-2xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#ffe1c2] rounded-full opacity-30 blur-3xl animate-ping"></div>
 
       <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-        {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -30,7 +29,6 @@ export default function AboutBanner() {
             and seamless user experience.
           </p>
 
-          {/* Animated Buttons */}
           <motion.div
             className="mt-8 flex gap-4"
             initial={{ opacity: 0, y: 20 }}

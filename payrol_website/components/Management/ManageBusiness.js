@@ -7,13 +7,11 @@ import { FaArrowRight } from "react-icons/fa6";
 export default function BusinessNeed() {
   return (
     <section className="w-full">
-      {/* TOP DARK SECTION */}
     
     <div className="bg-[#0E1924] text-white px-8 md:px-16 py-20">
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-        {/* LEFT CONTENT */}
         <div>
           <button className="bg-[#fa9404] text-black text-sm font-semibold px-4 py-2 rounded-md">
             WHY BUSINESSES NEED PAYROLL SYSTEM
@@ -24,13 +22,11 @@ export default function BusinessNeed() {
             numbers.
           </h2>
 
-          {/* STATS */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
 
-            {/* STAT 1 */}
             <div className="flex items-start gap-4">
               <div className="animate-rise">
-                <FaArrowUp className="text-[#fa9404] text-3xl" />
+                <FaArrowUp className="text-[#fa9404] text-5xl" />
               </div>
 
               <div>
@@ -43,10 +39,9 @@ export default function BusinessNeed() {
               </div>
             </div>
 
-            {/* STAT 2 */}
             <div className="flex items-start gap-4">
               <div className="animate-rise">
-                <FaArrowUp className="text-[#fa9404] text-3xl" />
+                <FaArrowUp className="text-[#fa9404] text-5xl" />
               </div>
 
               <div>
@@ -62,7 +57,6 @@ export default function BusinessNeed() {
           </div>
         </div>
 
-        {/* RIGHT SMALL IMAGE */}
         <div className="flex justify-center lg:justify-end">
           <img
             src="/manage/business-img2.jpg"
@@ -74,7 +68,7 @@ export default function BusinessNeed() {
       </div>
     </div>
 
-      {/* BOTTOM IMAGE SECTION */}
+ 
       <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
         <img
           src="/manage/business-team.jpg"
@@ -82,10 +76,9 @@ export default function BusinessNeed() {
           className="w-full h-full object-cover"
         />
 
-        {/* BLACK GRADIENT FROM BOTTOM */}
+      
         <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-black via-black/50 to-transparent"></div>
 
-        {/* TEXT ON IMAGE */}
         <div className="absolute bottom-16 left-8 md:left-16">
           <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight max-w-xl">
             We make the creative <br /> solutions for business!
@@ -116,7 +109,6 @@ export default function BusinessNeed() {
         </div>
       </div>
 
-      {/* ARROW ANIMATION */}
       <style>{`
         @keyframes rise {
           0% { transform: translateY(12px); opacity: 0; }

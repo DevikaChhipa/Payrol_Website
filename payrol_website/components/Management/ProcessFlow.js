@@ -32,7 +32,7 @@ export default function WorkProcessFlow() {
             payroll processing
           </h2>
 
-           <Link href="#contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+           <Link href="/contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
                 <span
                   className="flex items-center gap-2 transition-all duration-700 ease-out
                                        group-hover:translate-x-full group-hover:opacity-0"
