@@ -25,12 +25,7 @@ export default function Footer() {
 
           {/* Phone + rotating circle (hidden by default) */}
           <Link href="/contact"
-            className="
-      absolute left-[58%] top-20 -translate-y-1/2
-      opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100
-      transition-all duration-500
-    "
-          >
+            className="absolute left-[58%] top-20 -translate-y-1/2 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500">
             <div className="relative w-32 h-32 md:w-40 md:h-30 lg:w-30 lg:h-30">
               {/* FIXED PHONE ICON */}
               <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -187,7 +182,7 @@ export default function Footer() {
             <p className="text-[#fa9404] text-sm font-semibold mb-1">
               CALL US NOW
             </p>
-            <p className="text-lg">0141- 4511098</p>
+            <p className="text-lg">0141- 1234567</p>
           </div>
           <div>
             <p className="text-[#fa9404] text-sm font-semibold mb-1">

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 export default function AboutBanner() {
   return (
     <section className="relative overflow-hidden -mt-30 bg-cover bg-center bg-no-repeat py-24 px-6 md:px-16"
-  style={{ backgroundImage: "url('about/banner-bg.jpg')" }}>
-    <div className="absolute inset-0 bg-black/60"></div>
+      style={{ backgroundImage: "url('about/banner-bg.jpg')" }}>
+      <div className="absolute inset-0 bg-black/60"></div>
 
      
       <div className="absolute top-10 left-10 w-32 h-32 bg-[#ffdfb2] rounded-full opacity-30 blur-2xl animate-pulse"></div>
@@ -38,13 +38,13 @@ export default function AboutBanner() {
           >
 
 
-            <Link href="/contact" className="px-6 py-3 border border-[#fa9404] text-[#fa9404] rounded-xl hover:bg-[#fa9404] hover:text-white transition-all duration-300">
+            <Link href={"/contact"} className="rounded-md border border-slate-200 px-6 py-2.5 text-white text-sm transition hover:border-yellow-300 hover:text-yellow-300">
               Contact Us
             </Link>
           </motion.div>
         </motion.div>
 
-      
+
 
       </div>
     </section>

@@ -33,24 +33,28 @@ export default function AboutSection() {
   return (
     <section className="bg-[#ecf0f4] pb-16 pt-24">
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_2fr] gap-10 px-6 lg:px-10 mb-10">
-        <div className="relative mx-auto max-w-2xl lg:mx-0 lg:block grid grid-cols-1 xs:grid-cols-2 gap-4 lg:gap-0">
-          <div className="relative lg:h-[432px] lg:w-[431px] rounded-md overflow-hidden ">
+        <div className="relative mx-auto max-w-2xl lg:mx-0 grid grid-cols-1 gap-4 lg:gap-0">
+          {/* Main image */}
+          <div className="relative w-full h-64 sm:h-80 lg:h-[432px] lg:w-[431px] rounded-md overflow-hidden">
             <Image
               src="/Home/about.png"
               alt="Team discussing finances"
               fill
-              className="object-cover relative"
+              className="object-cover"
             />
           </div>
-          <div className="lg:h-[327px] lg:w-[302px]  rounded-none overflow-hidden shadow-xl lg:absolute md:hidden lg:block  lg:-bottom-14 lg:left-38 lg:rounded-md">
+
+          {/* Small overlay image – hidden on mobile, overlaid on lg */}
+          <div className="hidden lg:block lg:absolute lg:-bottom-14 lg:left-36 lg:h-[327px] lg:w-[302px] rounded-md overflow-hidden shadow-xl">
             <Image
               src="/Home/about2.png"
               alt="Professional at desk"
               fill
-              className="object-cover relative"
+              className="object-cover"
             />
           </div>
         </div>
+
         <div className="pt-12 lg:pt-0 max-w-6xl mx-auto">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10 ml-16 items-center justify-center">
             <div className="w-full lg:max-w-md">
@@ -58,7 +62,7 @@ export default function AboutSection() {
                 About us
               </span>
 
-              <h2 className="mt-4 text-[16px] font-bold  text-[#1e3238] md:text-[48px]" style={{lineHeight:"48px"}}>
+              <h2 className="mt-4 text-[16px] font-bold  text-[#1e3238] md:text-[48px]" style={{ lineHeight: "48px" }}>
                 With a global reach our firm has been in business since 1998.
               </h2>
 

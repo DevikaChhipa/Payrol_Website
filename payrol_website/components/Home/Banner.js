@@ -97,9 +97,9 @@ export default function FullscreenHeroSlider() {
                                     <span>Request Demo</span>
                                 </span>
                             </Link>
-                            <button className="rounded-md border border-slate-200 px-6 py-2.5 text-sm transition hover:border-yellow-300 hover:text-yellow-300">
+                            <Link href={"/contact"} className="rounded-md border border-slate-200 px-6 py-2.5 text-sm transition hover:border-yellow-300 hover:text-yellow-300">
                                 Contact Us
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
