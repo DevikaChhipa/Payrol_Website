@@ -39,7 +39,7 @@ export default function Header() {
           <Link href="/" className="text-yellow-400 font-semibold text-[14px]">
             Home
           </Link>
-          <Link href="/About" className="hover:text-yellow-300 text-[14px]">
+          <Link href="/about" className="hover:text-yellow-300 text-[14px]">
             About
           </Link>
           <Link href="/management" className="hover:text-yellow-300 text-[14px]">
