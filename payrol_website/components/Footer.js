@@ -127,13 +127,10 @@ export default function Footer() {
               placeholder="Your Email Address"
               className="px-4 py-3 bg-transparent outline-none w-full text-gray-300"
             />
-           <Link
-  href="/"
-  className="bg-[#fa9404] text-black w-10 h-8 flex items-center justify-center 
-             rounded-full font-bold mr-2 pb-1"
->
-  →
-</Link>
+           <Link href="/" className="bg-[#fa9404] text-black w-10 h-8 flex items-center justify-center 
+             rounded-full font-bold mr-2 pb-1">
+               →
+            </Link>
 
           </div>
 
