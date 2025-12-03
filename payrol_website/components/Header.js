@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <section className="relative text-white overflow-hidden">
-      {/* Top info bar */}
+    
       <div className="w-full bg-[#16222d] text-sm py-5 px-4 md:py-5 md:px-12 relative z-50">
         <div className="mx-auto flex items-center justify-between gap-4">
           <p className="opacity-80 text-xs md:text-sm">
@@ -22,9 +22,9 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Navbar */}
+ 
       <header className="flex items-center relative z-40 lg:border-b lg:border-slate-200/80 py-4 md:py-8 justify-between gap-4 px-4 md:px-12 lg:bg-transparent md:bg-[#0d1821]">
-        {/* Logo */}
+    
         <div className="flex items-center gap-2">
          <Image 
          src="/LOGO.png"
@@ -34,7 +34,7 @@ export default function Header() {
          className="h-[8vh] rounded-lg p-2"/>
         </div>
 
-        {/* Desktop nav */}
+     
         <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-wide">
           <Link href="/" className="text-yellow-400 font-semibold text-[14px]">
             Home
@@ -53,7 +53,6 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Right info / CTA (desktop) */}
         <div className="hidden md:flex items-center gap-4">
           <div className="group flex items-center border-r-2 border-slate-400 pr-4 gap-2 text-xs">
             <div className="w-12 h-12 rounded-full border group-hover:bg-yellow-400 border-yellow-400 transition-all flex items-center justify-center">
@@ -91,7 +90,7 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile menu button */}
+
         <button
           className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/30"
           onClick={() => setOpen(!open)}
@@ -117,7 +116,7 @@ export default function Header() {
         </button>
       </header>
 
-      {/* Mobile full-screen menu: flips down from top */}
+
       <div
         className={`fixed inset-0 z-30 bg-[#0d1821] text-white transform transition-transform duration-500 origin-top
         md:hidden ${open ? "translate-y-0 top-30.5" : "-translate-y-full"}`}
@@ -140,10 +139,10 @@ export default function Header() {
           <Link href="/about" onClick={() => setOpen(false)}>
             About
           </Link>
-          <Link href="/Payroll" onClick={() => setOpen(false)}>
+          <Link href="/management" onClick={() => setOpen(false)}>
             Payroll Management
           </Link>
-          <Link href="/Features" onClick={() => setOpen(false)}>
+          <Link href="/feature" onClick={() => setOpen(false)}>
             Features
           </Link>
           <Link href="/contact" onClick={() => setOpen(false)}>

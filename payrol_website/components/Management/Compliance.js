@@ -12,19 +12,17 @@ export default function ComplianceTaxhandling() {
                 <span className="bg-white text-gray-900 px-4 py-2 text-sm font-semibold rounded-md">
                     Compliance & Tax Handling
                 </span>
-                <p className="text-gray-600 mt-4">
+                <p className="text-gray-600 mt-4 text-lg">
                     Payroll offers accurate, compliant, and automated payroll services, saving you time and ensuring your employees.
                 </p>
             </div>
+       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
 
-            {/* Cards */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-
-                {/* Card 1 */}
+            
                 <div className="bg-gray-50 rounded-lg shadow-md p-8 text-center border border-gray-200">
                     <div className="flex justify-center mb-4">
-    <FaMoneyBillTrendUp className="text-5xl text-[#fa9404]" />
-</div>
+                      <FaMoneyBillTrendUp className="text-5xl text-[#fa9404]" />
+                    </div>
 
                     <h3 className="text-xl font-semibold mb-3">Affordable</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -33,14 +31,13 @@ export default function ComplianceTaxhandling() {
                     </p>
                 </div>
 
-                {/* Card 2 — Uplifted */}
+           
                <div className="relative group">
 
 
   <span className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#fa9404] 
                    rounded-full group-hover:w-full transition-all duration-500"></span>
 
-  {/* CARD */}
   <div className="bg-white rounded-lg shadow-xl p-8 text-center border border-gray-200
                   md:-mt-10 md:shadow-2xl md:scale-[1.05] transition-all relative z-10">
 
@@ -58,8 +55,6 @@ export default function ComplianceTaxhandling() {
   </div>
 </div>
 
-
-                {/* Card 3 */}
                 <div className="bg-gray-50 rounded-lg shadow-md p-8 text-center border border-gray-200">
                     <div className="flex justify-center mb-4">
                         <RiCustomerService2Fill  className="text-5xl text-[#fa9404]" />

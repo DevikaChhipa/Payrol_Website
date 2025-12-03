@@ -11,19 +11,15 @@ export default function Footer() {
       <div className="absolute left-0 top-62 opacity-20 pointer-events-none">
         <FaArrowTrendUp className="text-[180px]" />
       </div>
-
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5 relative group">
           <p className="text-[#fa9404] font-semibold tracking-wider text-sm mb-3">
-            WANT TO GET ANY SUPPORT?
+            WANT TO GET ANY SUPPORT ?
           </p>
-
           <h2 className="text-6xl font-bold leading-[1.1]">
             Let’s <br /> Discuss
             <span className="text-[#fa9404]">!</span>
           </h2>
-
-          {/* Phone + rotating circle (hidden by default) */}
           <Link href="/contact"
             className="absolute left-[58%] top-20 -translate-y-1/2 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500">
             <div className="relative w-32 h-32 md:w-40 md:h-30 lg:w-30 lg:h-30">

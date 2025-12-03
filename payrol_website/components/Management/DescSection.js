@@ -10,7 +10,6 @@ export default function MainSection() {
 
       <div className="flex flex-col lg:flex-row justify-between gap-16 md:mt-10 mt-5">
 
-        {/* LEFT SIDE */}
         <div className="flex-1">
           <p className="text-sm font-semibold text-[#fa9404]">ABOUT PAYROLL</p>
           <h2 className="text-4xl font-bold text-[#0e1924] mt-2">
@@ -28,7 +27,6 @@ export default function MainSection() {
           </p>
         </div>
 
-        {/* MIDDLE SECTION */}
         <div className="flex-1">
           <p className="text-sm font-semibold text-[#fa9404]">
             WHY CHOOSE ZENPAY
@@ -43,22 +41,18 @@ export default function MainSection() {
           </p>
         </div>
 
-        {/* IMAGE SECTION */}
         <div className="flex-1 flex justify-center items-center">
           <div className="relative w-[260px] h-[260px]">
 
-            {/* Main Image */}
             <Image
-              src="/manage/main-img1.jpg" // replace with your payroll image
+              src="/manage/main-img1.jpg" 
               alt="Payroll Software Dashboard"
               width={260}
               height={260}
               className="rounded-xl shadow-xl opacity-90 border-t-4 border-r-4 border-orange-500"
             />
-
-            {/* Small Image */}
             <Image
-              src="/manage/main-img2.jpg" // replace with your payroll image
+              src="/manage/main-img2.jpg" 
               alt="Payroll Processing"
               width={180}
               height={180}
@@ -66,7 +60,6 @@ export default function MainSection() {
             />
           </div>
         </div>
-
       </div>
     </section>
   );
