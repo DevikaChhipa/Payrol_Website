@@ -47,7 +47,7 @@ export default function FullscreenHeroSlider() {
     }, []);
 
     return (
-        <section className="relative -mt-30 h-[92vh] w-full overflow-hidden bg-slate-800 text-white">
+        <section className="relative -mt-32 h-[92vh] w-full overflow-hidden bg-slate-800 text-white">
             {/* background slides */}
             <div className="absolute inset-0">
                 {slides.map((slide, i) => (
@@ -75,7 +75,7 @@ export default function FullscreenHeroSlider() {
                             {slides[index].subtitle}
                         </p>
                         <div className="flex gap-4">
-                            <Link href="#contact" className="group relative inline-flex h-13 items-center overflow-hidden rounded-md bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+                            <Link href="/contact" className="group relative inline-flex h-13 items-center overflow-hidden rounded-md bg-yellow-400 px-6 text-[15px] font-semibold text-white">
                                 <span
                                     className="flex items-center gap-2 transition-all duration-700 ease-out
                                        group-hover:translate-x-full group-hover:opacity-0"
@@ -97,7 +97,7 @@ export default function FullscreenHeroSlider() {
                                     <span>Request Demo</span>
                                 </span>
                             </Link>
-                            <Link href={"/contact"} className="rounded-md border border-slate-200 px-6 py-2.5 text-sm transition hover:border-yellow-300 hover:text-yellow-300">
+                            <Link href={"/contact"} className="rounded-md border border-slate-200 px-6 pt-3.5 text-sm transition hover:border-yellow-300 hover:text-yellow-300">
                                 Contact Us
                             </Link>
                         </div>
@@ -111,7 +111,7 @@ export default function FullscreenHeroSlider() {
                 {slides.map((_, i) => {
                     const active = i === index;
                     return (
-                        <button
+                        <Link href="/"
                             key={i}
                             onClick={() => setIndex(i)}
                             className={
@@ -121,7 +121,7 @@ export default function FullscreenHeroSlider() {
                             }
                         >
                             {String(i + 1).padStart(2, "0")}
-                        </button>
+                        </Link>
                     );
                 })}
             </div>

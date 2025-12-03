@@ -26,7 +26,7 @@ export default function Cta() {
                         </h2>
                     </div>
                     <div className="absolute bottom-0 right-0">
-                        <Link href="#contact" className="group relative inline-flex h-13 items-center overflow-hidden rounded-md bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+                        <Link href="/contact" className="group relative inline-flex h-13 items-center overflow-hidden rounded-md bg-yellow-400 px-6 text-[15px] font-semibold text-white">
                             <span
                                 className="flex items-center gap-2 transition-all duration-700 ease-out
                                        group-hover:translate-x-full group-hover:opacity-0"

@@ -3,11 +3,11 @@
 
 import { motion } from "framer-motion";
 
-export default function ManagementBanner() {
+export default function BlogDetailbanner() {
     return (
         <section
-            className="relative w-full h-[60vh] md:h-[70vh] -mt-32 bg-cover bg-center bg-no-repeat flex items-end"
-            style={{ backgroundImage: "url('/manage/manage-banner.jpg')" }}>
+            className="relative w-full h-[60vh] md:h-[70vh] -mt-32 bg-cover bg-bottom bg-no-repeat flex items-end"
+            style={{ backgroundImage: "url('/blog/blogdetailbanner.jpg')" }}>
 
             <div className="absolute inset-0 bg-black/60"></div>
 
@@ -20,8 +20,7 @@ export default function ManagementBanner() {
                         viewport={{ once: true }}
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-                            Payroll
-                            <br /> <span className="text-[#fa9404]">Management</span>
+                            Blog <span className="text-[#fa9404]">Detail</span>
                         </h1>
                     </motion.div>
                     <motion.div
@@ -31,9 +30,7 @@ export default function ManagementBanner() {
                         viewport={{ once: true }}
                         className="flex justify-center"
                     >
-                        <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
-                            Automated payroll solutions that save time and ensure compliance.
-                        </p>
+                       
                     </motion.div>
                 </div>
             </div>

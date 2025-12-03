@@ -38,7 +38,7 @@ export default function CompanyStory() {
             Our mission is to provide exceptional Accounting, Taxation & Payroll
             Processing Services to businesses and individuals, helping them achieve.
           </p>
-          <Link href="#contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+          <Link href="/contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
             <span className="flex items-center gap-2 transition-all duration-700 ease-out group-hover:translate-x-full group-hover:opacity-0">
               <span>Discover More</span>
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">

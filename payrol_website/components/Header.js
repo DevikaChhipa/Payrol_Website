@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
 import { IoCallOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
@@ -15,9 +16,9 @@ export default function Header() {
           <p className="opacity-80 text-xs md:text-sm">
             Smart payroll experts ready to help you!
           </p>
-          <button className="underline hover:text-yellow-400 text-xs md:text-sm">
+          <Link href="/contact" className="underline hover:text-yellow-400 text-xs md:text-sm">
             Contact now
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -25,12 +26,12 @@ export default function Header() {
       <header className="flex items-center relative z-40 lg:border-b lg:border-slate-200/80 py-4 md:py-8 justify-between gap-4 px-4 md:px-12 lg:bg-transparent md:bg-[#0d1821]">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-full bg-yellow-400 flex items-center justify-center font-bold text-black">
-            P
-          </div>
-          <span className="text-lg md:text-xl font-semibold tracking-tight">
-            PayFlow
-          </span>
+         <Image 
+         src="/LOGO.png"
+         width={140}
+         height={100}
+         alt="logo"
+         className="h-[8vh] rounded-lg p-2"/>
         </div>
 
         {/* Desktop nav */}
@@ -38,10 +39,10 @@ export default function Header() {
           <Link href="/" className="text-yellow-400 font-semibold text-[14px]">
             Home
           </Link>
-          <Link href="/about" className="hover:text-yellow-300 text-[14px]">
+          <Link href="/About" className="hover:text-yellow-300 text-[14px]">
             About
           </Link>
-          <Link href="/Payroll" className="hover:text-yellow-300 text-[14px]">
+          <Link href="/management" className="hover:text-yellow-300 text-[14px]">
             Payroll Management
           </Link>
           <Link href="/feature" className="hover:text-yellow-300 text-[14px]">
@@ -60,12 +61,12 @@ export default function Header() {
             </div>
             <div className="leading-tight">
               <p className="opacity-70 mb-1 text-[15px]">Need to talk</p>
-              <p className="font-semibold text-[15px]">(+91) 12345 67891</p>
+              <p className="font-semibold text-[15px]">0141- 1234567</p>
             </div>
           </div>
 
           <Link
-            href="#contact"
+            href="/contact"
             className="group relative inline-flex h-11 items-center overflow-hidden rounded-md bg-yellow-400 px-5 text-[15px] font-semibold text-white"
           >
             <span
@@ -161,7 +162,7 @@ export default function Header() {
             </div>
 
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-md bg-yellow-400 px-4 py-2 text-sm font-semibold text-black"
             >

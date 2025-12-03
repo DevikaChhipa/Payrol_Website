@@ -5,7 +5,7 @@ import BlogSection from "../../../components/blog/Blogsection";
 
 
 
-export default function Contact() {
+export default function Blog() {
   return (    
     <>
     <div className="bg-[#eef2f5]">

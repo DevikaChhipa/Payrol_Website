@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AboutBanner() {
   return (
-    <section className="relative overflow-hidden -mt-30 bg-cover bg-center bg-no-repeat py-24 px-6 md:px-16"
+    <section className="relative overflow-hidden -mt-32 bg-cover bg-center bg-no-repeat py-24 px-6 md:px-16"
       style={{ backgroundImage: "url('about/banner-bg.jpg')" }}>
       <div className="absolute inset-0 bg-black/60"></div>
 
@@ -38,7 +38,7 @@ export default function AboutBanner() {
           >
 
 
-            <Link href={"/contact"} className="rounded-md border border-slate-200 px-6 py-2.5 text-white text-sm transition hover:border-yellow-300 hover:text-yellow-300">
+            <Link href={"/contact"} className="rounded-md border border-yellow-300 px-6 py-2.5 text-yellow-300 text-sm transition hover:border-gray-300 hover:text-gray-300">
               Contact Us
             </Link>
           </motion.div>

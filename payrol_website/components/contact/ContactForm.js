@@ -10,12 +10,12 @@ export default function ContactSection() {
      const cards = [
     {
       icon: <MdEmail className="text-[#fa9404] w-10 h-10" />,
-      title: "reply@example.com",
+      title: "zenpay@support.com",
       desc: "Provides speed, cost-effectiveness, and the ability to easily send files.",
     },
     {
       icon: <FaPhoneAlt className="text-[#fa9404] w-10 h-10" />,
-      title: "+0123-895-4732",
+      title: "0141- 1234567",
       desc: (
         <>
           Mon to Sat: 09:00am to 05:00pm <br />
@@ -28,8 +28,7 @@ export default function ContactSection() {
       title: "Location",
       desc: (
         <>
-          8502 Preston Rd. Inglewood, Maine 9838086, <br />
-          Hoofddorp Noord-2132
+         Aarey Road, Goregaon (East), Mumbai - 400 063
         </>
       ),
     },
@@ -108,7 +107,7 @@ export default function ContactSection() {
 
 
 
- <Link href="#contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
+ <Link href="/contact" className="group mt-10 relative inline-flex h-13 items-center overflow-hidden rounded-sm bg-[#16222d] hover:bg-yellow-400 px-6 text-[15px] font-semibold text-white">
                 <span
                   className="flex items-center gap-2 transition-all duration-700 ease-out
                                        group-hover:translate-x-full group-hover:opacity-0"

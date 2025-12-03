@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function ContactBanner() {
     return (
         <section
-            className="relative w-full h-[60vh] md:h-[70vh] -mt-30 bg-cover bg-center bg-no-repeat flex items-end"
+            className="relative w-full h-[60vh] md:h-[70vh] -mt-32 bg-cover bg-center bg-no-repeat flex items-end"
             style={{ backgroundImage: "url('/contact/contact-banner.jpg')" }}>
 
             <div className="absolute inset-0 bg-black/50"></div>
@@ -30,10 +30,7 @@ export default function ContactBanner() {
                         viewport={{ once: true }}
                         className="flex justify-center"
                     >
-                        <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
-                            We are committed to delivering exceptional quality, modern
-                            solutions, and seamless user experience.
-                        </p>
+                       
                     </motion.div>
                 </div>
             </div>

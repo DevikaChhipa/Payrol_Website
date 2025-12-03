@@ -77,33 +77,18 @@ export default function Footer() {
     </Link>
   </li>
 
-  <li>
-    <Link href="/blog" className="relative group inline-block hover:text-[#fa9404]">
-      Blog
-      <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#fa9404] transition-all duration-300 group-hover:w-full"></span>
-    </Link>
-  </li>
-
-  <li>
-    <Link href="/" className="relative group inline-block hover:text-[#fa9404]">
+ <li>
+    <Link href="/About" className="relative group inline-block hover:text-[#fa9404]">
       About
       <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#fa9404] transition-all duration-300 group-hover:w-full"></span>
     </Link>
   </li>
-
-  <li>
-    <Link href="/" className="relative group inline-block hover:text-[#fa9404]">
-      Blog Page
+  {/* <li>
+    <Link href="/blog" className="relative group inline-block hover:text-[#fa9404]">
+      Blog
       <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#fa9404] transition-all duration-300 group-hover:w-full"></span>
     </Link>
-  </li>
-
-  <li>
-    <Link href="/" className="relative group inline-block hover:text-[#fa9404]">
-      Service Page
-      <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#fa9404] transition-all duration-300 group-hover:w-full"></span>
-    </Link>
-  </li>
+  </li> */}
 
 </ul>
 
@@ -113,15 +98,15 @@ export default function Footer() {
           <h3 className="font-semibold text-lg mb-4">Our Company</h3>
           <ul className="space-y-3 text-gray-300">
              <li>
-    <Link href="/" className="relative group inline-block hover:text-[#fa9404]">
-      Blog Single
+    <Link href="/feature" className="relative group inline-block hover:text-[#fa9404]">
+      Features Page
       <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#fa9404] transition-all duration-300 group-hover:w-full"></span>
     </Link>
   </li>
 
   <li>
-    <Link href="/" className="relative group inline-block hover:text-[#fa9404]">
-      Product
+    <Link href="/management" className="relative group inline-block hover:text-[#fa9404]">
+      Payroll Management
       <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#fa9404] transition-all duration-300 group-hover:w-full"></span>
     </Link>
   </li>
@@ -168,14 +153,14 @@ export default function Footer() {
             <p className="text-[#fa9404] text-sm font-semibold mb-1">
               EMAIL US
             </p>
-            <p className="text-lg">payroll@infotech.com</p>
+            <p className="text-lg">zenpay@support.com</p>
           </div>
 
           <div>
             <p className="text-[#fa9404] text-sm font-semibold mb-1">
               LOCATION
             </p>
-            <p className="text-lg">Jagatpura , Jaipur</p>
+            <p className="text-lg">Aarey Road, Goregaon (East), Mumbai - 400 063</p>
           </div>
 
           <div>
@@ -184,7 +169,7 @@ export default function Footer() {
             </p>
             <p className="text-lg">0141- 1234567</p>
           </div>
-          <div>
+          {/* <div>
             <p className="text-[#fa9404] text-sm font-semibold mb-1">
               SOCIAL LINKS
             </p>
@@ -200,23 +185,24 @@ export default function Footer() {
                 <FaYoutube />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="relative mt-10 text-gray-400 text-sm pb-6">
         <p>
-          Copyright © {new Date().getFullYear()} Payroll, All Rights Reserved.
+          Copyright © {new Date().getFullYear()} Zenpay, All Rights Reserved.
         </p>
+        <div className="flex grid-col gap-12 my-4">
+          <li><Link href="/privacypolicy">Privacy Policy</Link></li>
+        <li><Link href="/refundpolicy">Refund Policy</Link></li>
+         <li><Link href="/terms">Terms & Conditions</Link></li>
+        </div>
 
         <p className="absolute inset-0 top-[-100px] text-[130px] font-bold opacity-20 tracking-widest select-none pointer-events-none text-end">
-          Payroll
+         Zenpay
         </p>
       </div>
       </div>
-      
-
-
-
     </footer>
   );
 }
